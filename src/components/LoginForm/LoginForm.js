@@ -60,6 +60,7 @@ export default function LoginForm() {
       });
     }
   };
+
   return (
     <Form className="login-form" onSubmitCapture={login} onChange={changeForm}>
       <Item>

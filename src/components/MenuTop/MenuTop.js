@@ -1,25 +1,18 @@
 import React, { useState } from "react";
 import peliculas from "../../assets/img/png/peliculas.png";
 import { Button, Menu, Switch, Modal, Input } from "antd";
-import {
-  PoweroffOutlined,
-  SearchOutlined,
-  CloseOutlined,
-} from "@ant-design/icons";
+import { PoweroffOutlined, SearchOutlined } from "@ant-design/icons";
 import "./MenuTop.scss";
 import useAuth from "../../hooks/useAuth";
-import { Link, Route, Router, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { logout } from "../../API/auth";
-import { getFilmsName } from "../../API/films";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import Searchs from "../../pages/Films/Searchs";
 
 export default function MenuTop(props) {
   const { confirm } = Modal;
   const { Item } = Menu;
   const { themeDark, setthemeDark } = props;
   const { user } = useAuth();
-  const [filmSearch, setfilmSearch] = useState([]);
   const [premiere, setpremiere] = useState(false);
   const [relleno, setrelleno] = useState(false);
   const [filmValue, setfilmValue] = useState("");
@@ -44,20 +37,13 @@ export default function MenuTop(props) {
 
   const onChangeInput = (e) => {
     const filmName = e.target.value;
-    console.log(filmName);
+    localStorage.setItem("filmvalue", `${filmName}`);
     setfilmValue(filmName);
     if (filmName) {
       setrelleno(true);
     } else {
       setrelleno(false);
     }
-    getFilmsName(filmName)
-      .then((response) => {
-        setfilmSearch(response);
-      })
-      .catch((err) => {
-        return err.message;
-      });
   };
 
   const click = (e) => {
@@ -129,7 +115,7 @@ export default function MenuTop(props) {
             value={filmValue}
           ></Input>
           {relleno ? (
-            <Link to={{ pathname: "/app/searchs", data: filmSearch }}>
+            <Link to="/app/searchs">
               <Button
                 onClick={() => {
                   setfilmValue("");

@@ -32,11 +32,13 @@ export default function LayoutHome(props) {
   const [themeDark, setthemeDark] = useState(false);
   const { user, isLoading } = useAuth();
 
+  localStorage.setItem("loading", isLoading);
+
   //Condición que te redirige a esta ruta en caso de que no haya ningun usuario logeado.
   if (!user && !isLoading) {
     return (
       <>
-        <Redirect to="/" />
+        <Redirect to={{ pathname: "/" }} />
       </>
     );
   }

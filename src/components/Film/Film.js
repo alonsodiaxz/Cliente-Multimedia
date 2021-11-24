@@ -13,7 +13,6 @@ export default function Film(props) {
   const link = localStorage.getItem("link");
   const info = localStorage.getItem("info");
   const rate = localStorage.getItem("rate");
-  console.log(rate);
 
   return (
     <div className="film">

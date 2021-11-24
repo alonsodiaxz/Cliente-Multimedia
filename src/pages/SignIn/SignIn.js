@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SignIn.scss";
 import { Layout, Tabs } from "antd";
 import Logo from "../../assets/img/png/peliculas.png";
@@ -8,6 +8,7 @@ import RegisterForm from "../../components/RegisterForm";
 export default function SignIn() {
   const { Content } = Layout;
   const { TabPane } = Tabs;
+
   return (
     <Layout className="sign-in">
       <Content className="sign-in__content">

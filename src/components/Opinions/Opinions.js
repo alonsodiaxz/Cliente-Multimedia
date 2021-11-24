@@ -19,7 +19,7 @@ export default function Opinions(props) {
       .catch((err) => {
         return err.message;
       });
-  }, []);
+  }, [title]);
 
   return (
     <div className="opinions">
@@ -41,7 +41,7 @@ export default function Opinions(props) {
 }
 
 function CommentItem(props) {
-  const { user, comment } = props;
+  const { comment } = props;
   console.log(comment);
   const { Item } = List;
   const { Meta } = Item;

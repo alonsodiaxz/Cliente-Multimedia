@@ -3,7 +3,7 @@ import "./UpdateFilms.scss";
 import { getFilmsGender } from "../../../API/films";
 import LoadMovies from "../../../components/LoadMovies/LoadMovies";
 
-export default function UpdateFilms(props) {
+export default function UpdateFilms() {
   const [filmsGender, setFilmsGender] = useState([]);
 
   const gender = localStorage.getItem("gender");
