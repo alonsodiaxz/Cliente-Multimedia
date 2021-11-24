@@ -1,0 +1,42 @@
+@import "../../scss/index.scss";
+
+.opinions {
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: cursive;
+    color: $primary-color-dark-light;
+  }
+
+  .comments {
+    .ant-list-item {
+      padding: 10px 30px 30px 10px; //10px arriba y abajo y 20px a los lados.
+      &-meta-description {
+        .ant-rate {
+          margin-bottom: 10px;
+          font-size: 17px;
+        }
+      }
+      &-action {
+        span {
+          color: $font-grey;
+        }
+
+        button {
+          background: transparent;
+        }
+      }
+      &-meta-title {
+        font-size: 18px;
+        font-family: sans-serif;
+        color: $primary-color-dark-dark;
+      }
+      &-no-flex {
+        padding-top: 10px;
+        margin-top: 15px;
+        color: $font-grey;
+        font-size: 15px;
+      }
+    }
+  }
+}

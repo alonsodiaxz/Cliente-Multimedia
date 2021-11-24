@@ -1,0 +1,36 @@
+@import "../../scss/index.scss";
+
+.footer {
+  background-color: transparent;
+
+  &__copyright {
+    .ant-col {
+      img {
+        width: 300px;
+        padding: 0 0px 20px 40px;
+      }
+
+      color: $marron-light;
+
+      h1 {
+        font-size: 22px;
+        font-weight: bold;
+        font-family: cursive;
+        color: $marron-light;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-style: unset;
+        color: $marron-light-light;
+      }
+
+      &-desarrolladores {
+        .ant-row {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

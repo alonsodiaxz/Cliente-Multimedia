@@ -1,0 +1,16 @@
+.home {
+  button {
+    height: 100px;
+  }
+  &__switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    > button {
+      margin-bottom: 20px;
+      width: 100px;
+      height: 20px;
+    }
+  }
+}

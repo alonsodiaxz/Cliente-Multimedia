@@ -1,0 +1,143 @@
+@import "../../scss/index.scss";
+
+.menu-top {
+  display: flex;
+  font-weight: bold;
+  color: $marron-light-light;
+
+  button {
+    color: $marron-light-light;
+    border: 0;
+    &:hover {
+      //Cuando se pase por encima del boton
+      color: $marron-light-light;
+    }
+    &:focus,
+    &:active {
+      color: $marron-light-light;
+    }
+  }
+
+  &__center {
+    margin-top: 5px;
+
+    .ant-menu {
+      border: 0;
+      display: flex;
+      padding: 4px;
+
+      background-color: transparent;
+
+      .ant-menu-item {
+        &-selected {
+          background-color: transparent;
+          color: $marron-light-light;
+        }
+      }
+    }
+
+    li {
+      padding-left: 6px;
+      padding-right: 6px;
+      list-style: none;
+      border: 0 !important;
+
+      a {
+        text-decoration: none;
+        background-color: transparent;
+        color: $marron-light-light !important;
+        font-weight: bold;
+
+        &:hover {
+          color: $primary-color !important;
+        }
+        &:focus,
+        &:active {
+          color: $font-yellow-pastel !important;
+        }
+      }
+    }
+  }
+
+  &__left {
+    img {
+      width: 240px;
+      padding: 0 50px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    justify-items: end;
+    position: absolute;
+    right: 0;
+    color: $marron-light-light !important;
+    font-weight: bold;
+
+    span {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 16px;
+      margin-top: 2px;
+    }
+
+    &-buscar {
+      display: flex;
+
+      button {
+        right: 50px;
+        background-color: transparent;
+        box-shadow: none;
+        position: absolute;
+        border: 0;
+        &:hover {
+          color: $primary-color !important;
+          background-color: transparent;
+        }
+        &:focus,
+        &:active {
+          color: $font-yellow-pastel !important;
+          background-color: transparent;
+          box-shadow: none;
+          border: 0;
+        }
+      }
+      .ant-input-search-icon {
+        color: $font-light;
+        margin-right: 20px;
+      }
+
+      input {
+        margin-left: 20px;
+        width: 240px;
+        outline: none;
+        padding: 0 30px 0px 25px;
+        font-size: 18px;
+        background: transparent;
+        color: $marron-light-light;
+        border-radius: 30px;
+        border: 1px solid;
+        transition: all 0.6s ease;
+        cursor: pointer;
+
+        svg {
+          width: 100px;
+        }
+
+        &:hover {
+          color: $primary-color !important;
+          background: transparent;
+          width: 240px;
+        }
+        &:focus,
+        &:active {
+          color: $font-light !important;
+          background: transparent;
+          width: 240px;
+        }
+      }
+    }
+  }
+}

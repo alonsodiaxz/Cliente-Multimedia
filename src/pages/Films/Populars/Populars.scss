@@ -1,0 +1,100 @@
+@import "../../../scss/index.scss";
+.popular-films {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .row-films {
+    .ant-col {
+      padding: 25px !important;
+      .ant-row {
+        .row-films {
+          .ant-col {
+            height: 530px;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 10em;
+    margin: 0;
+    text-transform: uppercase;
+    color: transparent;
+    text-shadow: 0 0 10px orange;
+    text-align: center;
+    letter-spacing: 2px;
+    animation-name: focus;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes focus {
+    0% {
+      text-shadow: 0 0 30px $texcol, 0 20px 50px darken($texcol, 30%);
+      letter-spacing: 30px;
+    }
+    50% {
+      text-shadow: 0 0 0 $texcol;
+      font-size: 10em;
+      letter-spacing: 2px;
+    }
+    75% {
+      text-shadow: 0 0 0 $texcol;
+      font-size: 10em;
+      letter-spacing: 2px;
+    }
+    100% {
+      text-shadow: 0 0 0 $texcol;
+      font-size: 10em;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__card {
+    border: 0;
+    background-color: $background-dark-web-light;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+
+    .ant-card-cover {
+      img {
+        height: 450px;
+        width: 300px;
+      }
+    }
+    .ant-card-body {
+      text-align: center;
+      padding: 25px;
+
+      .ant-card-meta-title,
+      .ant-card-meta-description {
+        color: $font-light;
+      }
+
+      .ant-card-meta-title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    .ant-card-actions {
+      background-color: rgb(36, 49, 87);
+      border: 0;
+      .ant-btn {
+        width: 90%;
+        height: 40px;
+        border: 1px solid rgb(113, 113, 255);
+        background-color: transparent;
+        color: $font-light;
+        font-size: 19px;
+        font-weight: lighter;
+      }
+    }
+  }
+}

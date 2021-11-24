@@ -1,0 +1,48 @@
+@import "../../scss/index.scss";
+.form-comments {
+  padding: 30px 0px 30px 10px;
+
+  .ant-rate-text,
+  h2 {
+    font-size: 26px;
+    color: $border-grey-dark;
+  }
+  h4 {
+    font-size: 20px;
+    color: $border-grey-dark;
+  }
+
+  .ant-btn {
+    color: $border-grey-dark;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .ant-rate-text {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: $marron-light;
+  }
+
+  button {
+    padding: 15px 15px 15px 15px;
+    border: 2px solid;
+
+    //Cuando estas por encima
+    &:hover {
+      background-color: $background-beige;
+      color: $border-grey-dark;
+      border: 2px solid;
+    }
+    //Cuando clickas
+    &:focus,
+    &:active {
+      background-color: $primary-color;
+      color: $font-light;
+      border: 0;
+      border: 2px solid;
+    }
+  }
+}
